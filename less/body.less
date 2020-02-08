@@ -1,0 +1,122 @@
+.body-container {
+    margin-top: 1%;
+    width: 100%;
+    height: 1000px;    
+
+    @media @mobile {
+        padding-top: 5%;
+    }
+
+    
+    .floating-div-container {
+        display: flex;
+        flex-direction: column;        
+        height: 175vh;
+        margin: 0% 5%;
+                
+        .floating-div-row {
+            height: 33.3%;
+            display: flex;
+            flex-direction: row;
+        } /* END FLOATING DIV ROW */
+
+        .image-container {
+            width: 20%;             
+            position: relative;
+            display: flex;  
+
+            @media @tablet {
+                display: none;
+                width: 0;
+            } /* MEDIA */
+           
+            
+            #pushing-right {                
+                align-items: center; 
+                width: 100%; 
+            } /* END PUSHING RIGHT */
+
+            #pushing-left {                
+                align-items: center; 
+                width: 100%; 
+            } /* END PUSHING LEFT */
+        } /* END IMAGE CONTAINER */
+
+        .floating-div {
+            width: 80%;
+            padding: 3%;
+
+            @media @tablet {
+                width: 100%;
+                margin-bottom: 3%;
+            } /* MEDIA */
+
+            .subheading {
+                font-size: 7rem;
+                background-color: transparent;
+                font-family: @bangers;
+                text-align: center;
+
+                @media @tablet {
+                    font-size: 4.6rem;
+                } /* MEDIA */
+
+                @media @mobile {
+                    font-size: 3.3rem;
+                } // MEDIA
+            } /* END SUBHEADING */
+
+            .body-p {
+                font-size: 2.3rem;
+                background-color: transparent;
+                font-family: @poppins;
+                // padding-top: 2%;
+
+                @media @tablet {
+                    font-size: 2.3rem;                   
+                } /* MEDIA */
+
+                @media @inbetween {
+                    font-size: 2.0rem;
+                }
+
+                @media @mobile {
+                    font-size: 1.9rem;
+                }
+            } /*END BODY P */ 
+        } /* END FLOATING DIV */
+
+            .sixr-logo {
+              font-weight: 900; 
+              animation-name: logo-animation; 
+              animation-duration: 5s;
+              animation-iteration-count: infinite;
+            }
+
+        #floatingdiv1 {
+            background-color: @mermaidblue;
+        } /* END */
+
+        #floatingdiv2 {
+            
+            background-color: @lilac;
+        } /* END */
+
+        #floatingdiv3 {
+            background-color: @papaya;
+        } /* END */
+
+
+    } /* END FLOATING DIV CONTAINER */    
+} /* END BODY CONTAINER */
+
+/* KEY FRAMES */ 
+
+@keyframes logo-animation {
+    50% {
+        color: red;
+    }
+    100% {
+        color: black;
+    }
+}

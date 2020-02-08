@@ -1,0 +1,142 @@
+.contact-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    border-bottom: 2px solid @mermaidblue;
+
+    .contact-nav-item a {
+        text-decoration: none;
+        color: white;
+        font-size: 3.2rem;
+        font-family: 'Bebas Neue', cursive;
+        animation-name: anchor-colors;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        display: block;
+        width: 120px;
+        text-align: center;
+        transition: border-bottom 0.2s ease-in;
+        border-radius: 8px;
+
+        &:hover {                  
+            border-bottom: 4px @mermaidblue solid;
+            color: black;
+        } // END Hover State - Nav Item A 
+    } // END Contact Nav Item A 
+} // END Contact Nav
+
+.body-wrapper {    
+    display: flex;
+    flex-direction: column;   
+    
+    .content-wrapper {
+        width: 80%;
+        height: 80vh;        
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: 9%;              
+
+        .image-wrapper {           
+            width: 50%;            
+            
+            @media @tablet {
+                display: none;
+                width: 0%;
+            } // MEDIA
+
+            .form-girl {
+                width: 100%;
+                padding-top: 10%;
+
+                @media @tablet {
+                    display: none;
+                } // Media
+            } // END Form Girl 
+        } // END Image Wrapper
+
+        .form-wrapper {            
+            width: 50%;
+            font-size: 2rem;
+            padding-left: 3%;
+            justify-content: center;
+            align-items: middle;
+            border-right: 2px inset @mermaidblue;   
+            text-align: center;
+
+            @media @tablet {
+                width: 100%;
+                border-left: 2px solid @mermaidblue;
+                border-righT: 2px solid @mermaidblue;
+            } //MEDIA 
+            
+            #message-text {
+                height: 20%;
+            } // END Message-Text
+         
+            .label {
+                color: @mermaidblue;
+                font-size: 30px;
+                font-family: @bebas;
+            } // END Label
+
+            span {
+                text-align: center;
+            } // END Span
+
+            input {
+                width: 50%;
+                height: 50px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+
+                @media @tablet {
+                    width: 75%;
+                } // Media
+                
+            } // END Input
+            
+            #submit {
+                margin-top: 3%;
+                font-family: @bebas;
+                font-size: 29px;
+                border-radius: 8px; 
+                cursor: pointer;
+                background-color: @mermaidblue;
+
+                &:hover {
+                    background-color: @papaya;
+                    border: 2px inset @mermaidblue;
+                } // End Hover State SUBMIT
+
+            } // END SUBMIT
+        } // END Form Wrapper
+        
+    } // END Content Wrapper
+    
+    .form-heading {
+        margin-top: 5%;
+
+        h1 {
+            font-size: 7rem;
+            text-align: center;
+            color: @mermaidblue;
+            font-family: @bebas;
+        } //  End H1
+    }// End Form Heading
+} // End Body Wrapper
+
+.contact-footer {
+    text-align: center;
+    color: @mermaidblue;
+    font-size: 2.0rem;
+    margin-bottom: 3%;
+
+    @media @tablet {
+        font-weight: bolder;
+        margin-top: 9%;
+    }
+} // Contact-Footer 

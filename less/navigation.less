@@ -1,0 +1,50 @@
+.header {
+
+
+    #head-banner {
+        width: 100%;  
+        height: 50%;              
+    } // end head banner
+        
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 3%;
+        padding-bottom: 2%;
+        
+
+        .nav-item a{
+            text-decoration: none;
+            color: white;
+            font-size: 3.2rem;
+            font-family: 'Bebas Neue', cursive;
+            animation-name: anchor-colors;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            display: block;
+            width: 120px;
+            text-align: center;
+            transition: border-bottom 0.2s ease-in;
+            border-radius: 8px;
+            
+
+            &:hover {                  
+                border-bottom: 4px @mermaidblue solid;
+                color: black;
+            } // End Hover State - Nav Item A
+
+        } // End Nav Item A
+    } // End Navigation
+} // End Header
+
+/* ANCHOR KEYFRAME ANIMATION */
+
+@keyframes anchor-colors {
+    50% {
+        color: @mermaidblue;
+    }
+    100% {
+        color: @papaya;
+    }
+}
